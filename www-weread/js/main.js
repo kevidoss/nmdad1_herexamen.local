@@ -40,30 +40,8 @@ $.getJSON('https://datatank.stad.gent/4/cultuursportvrijetijd/bibliotheekopenbes
 
     for (var i = 0; i < books.length; i++) {
       if (books[i].type == "Boek"){
-        $('#books').append($('<p>', {text: books[i].title}));
+        $('#books').append($("<p>", {text: books[i].title},  "</p>"));
 }
     }
 });
 });
-
-
-/*
-*Search list of books and mark 'your favourite'
-*/
-$(document).ready(function() {
-  $("form").submit(function(e){
-       $("#books").show(); //laat boeken zien
-       query = $("#search").val();
-       hiliter(query, "highlight");
-       e.preventDefault(); //verhinder dat form wordt ingediend
-  });
-});
-
-/*
-*Give a class to user input in search bar (for highlighting the input) 
-*/
-function hiliter(query, className) {
-    var regex = new RegExp("\\b"+query+"\\b", "gi");
-    $("#books")[0].innerHTML = $("#books")[0].innerHTML.replace(regex, function(matched) {return "<span class=\"" + className + "\">" + matched + "</span>";});
-
-};
