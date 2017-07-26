@@ -1,6 +1,8 @@
 ---
 ---
 
+/* {% raw %} */
+
 body {background-color: #dedede;}
 .navbar {background-color: #ec6d58;}
 
@@ -50,6 +52,7 @@ tr:nth-child(even) {
 	display: block;
 	width: 60px;
 	height: 60px;
+  top: 0px;
 	border: 20px solid #ed9800;
 	border-radius: 50%;
 	border-bottom-right-radius: 0;
@@ -64,7 +67,6 @@ tr:nth-child(even) {
 	transition: all 368ms ease-in 0s;
 }
 .ahs-logo__s--1 {
-	top: 0px;
 }
 .ahs-logo__s--2 {
 	bottom: 0px;
@@ -367,3 +369,7 @@ opacity: 1;
 section{
 padding-left: 15px;
 }
+
+
+
+/* {% endraw %} */

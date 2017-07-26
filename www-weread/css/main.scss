@@ -1,14 +1,15 @@
----
----
+$bgcolor: #dedede; //grey
+$accentcolor: #ec6d58; //orange
+$menucolor: #fff; //white
+$textcolor: #fff; //white
 
-body {background-color: #dedede;}
-.navbar {background-color: #ec6d58;}
-
+body {background-color: $bgcolor; color: $textcolor;}
+.navbar {background-color: $accentcolor;}
 
 .item { margin-bottom: 25px; }
 .w100 { width: 100%; }
 
-.highlight {background-color: #ec6d58; color: white;}
+.highlight {background-color: $accentcolor; color: $menucolor;}
 
 body,html{
 height: 100%;
@@ -22,13 +23,13 @@ table {
 }
 
 td, th {
-    border: 1px solid #ec6d58;
+    border: 1px solid $accentcolor;
     text-align: left;
     padding: 8px;
 }
 
 tr:nth-child(even) {
-    background-color: #ec6d58; color: #fff;
+    background-color: $accentcolor; color: $menucolor;
 }
 
 .profpics {width: 49%; height: auto; margin-bottom: 3%;}
@@ -50,6 +51,7 @@ tr:nth-child(even) {
 	display: block;
 	width: 60px;
 	height: 60px;
+  top: 0px;
 	border: 20px solid #ed9800;
 	border-radius: 50%;
 	border-bottom-right-radius: 0;
@@ -64,7 +66,6 @@ tr:nth-child(even) {
 	transition: all 368ms ease-in 0s;
 }
 .ahs-logo__s--1 {
-	top: 0px;
 }
 .ahs-logo__s--2 {
 	bottom: 0px;
@@ -81,7 +82,7 @@ tr:nth-child(even) {
 .clock {
   text-align: center;
 	font-size: 15px;
-	color: #ffffff;
+	color: $menucolor;
 }
 
 .homebtnlink {width: 100%;}
@@ -90,8 +91,8 @@ tr:nth-child(even) {
 
 .facebookbtn {background-color: #3b5998;}
 
-#btnContactUs {color: #fff;
-    background-color: #ec6d58;
+#btnContactUs {color: $menucolor;
+    background-color: $accentcolor;
     border-color: #f97a67;}
 
 
@@ -206,25 +207,25 @@ max-width: 320px;
   	font-weight:bold;
   }
   .signup-btn {
-    background: #ec6d58;
+    background: $accentcolor;
     -webkit-border-radius: 4;
     -moz-border-radius: 4;
     border-radius: 4px;
 
     font-family: Arial;
-    color: #ffffff;
+    color: $menucolor;
     font-size: 20px;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
   }
 
   .signup-btn:hover {
-    background: #fff;
-    color: #ec6d58;
+    background: $menucolor;
+    color: $accentcolor;
     text-decoration: none;
   }
   .navbar-default .navbar-brand{
-  		color:#fff;
+  		color:$menucolor;
   		font-size:30px;
   		font-weight:bold;
   	}
@@ -255,6 +256,7 @@ max-width: 320px;
 /*lets nav bar to be showed on mouseover*/
 nav.sidebar:hover + .main{
   margin-left: 200px;
+
 }
 
 /*Center Brand*/
@@ -272,7 +274,6 @@ nav.sidebar .navbar-brand, nav.sidebar .navbar-header{
 nav.sidebar a{
   padding-right: 13px;
 }
-
 /*adds border top to first nav box */
 nav.sidebar .navbar-nav > li:first-child{
   border-top: 1px #e5e5e5 solid;
@@ -302,10 +303,10 @@ nav.sidebar .navbar-collapse, nav.sidebar .container-fluid{
 
 /*colors dropdown box text */
 .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
-  color: #fff;
+  color: $menucolor;
 }
 .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover {
-  color: #ec6d58;;
+  color: $accentcolor;;
 }
 
 /*gives sidebar width/height*/
@@ -357,8 +358,8 @@ nav.sidebar .forAnimate{
 }
 
 nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
-color: #ec6d58;;
-background-color: #fff;
+color: $accentcolor;;
+background-color: $menucolor;
 }
 
 nav:hover .forAnimate{
