@@ -30,7 +30,7 @@ $( window ).scroll(function() {
 
 
 /*
-*Homepage load dataset and show only the books
+*books load dataset and show only the books
 */
 
 $(document).ready(function() {

@@ -14,6 +14,7 @@ title: People
 
     <div class="container">
       <div class="row">
+
         <!-- Use handlebars and javascript to show all people in the object with one script -->
           <script id="users-template" type="text/x-handlebars-template">
 
@@ -23,20 +24,19 @@ title: People
             {{#each this}}
               <div class="col-md-3">
               <div class="user">
-                    <h4>{{firstName}} {{surName}}</h4>
                     <img src="{{picture}}" class="profpic"/>
-                    <p><a class="btn btn-default" href="../profile/profile-{{id}}.html" role="button">View details &raquo;</a></p>
+                    <h4>{{firstName}} {{surName}}</h4>
+                    <p><a class="btn btn-default" href="profile.html?id={{id}}" role="button">View details &raquo;</a></p>
               </div>
             </div>
             {{/each}}
 
             {% endraw %}
-            
+
 
           </script>
         </div>
     </div> <!-- /container -->
-
 
 
 
