@@ -26,7 +26,7 @@ title: People
               <div class="user">
                     <img src="{{picture}}" class="profpic"/>
                     <h4>{{firstName}} {{surName}}</h4>
-                    <p><a class="btn btn-default" href="profile.html?id={{id}}" role="button">View details &raquo;</a></p>
+                    <p><a class="btn btn-default profileLink" id="{{id}}" href="profile.html?id={{id}}" role="button">View details &raquo;</a></p>
               </div>
             </div>
             {{/each}}
@@ -40,11 +40,12 @@ title: People
 
 
 
-        <script src="../js/handlebars-v4.0.5.js"></script>
-        <script src="../js/people.js"></script>
-
 {% include footer.html %}
 
+<script src="../js/handlebars-v4.0.5.js"></script>
+<script src="../js/people.js"></script>
+<script src="../js/template.js"></script>
+<script src="../js/profile.js"></script>
 
     </body>
 </html>

@@ -15,8 +15,10 @@ title: Profile
 
     <div class="container">
       <div class="row">
-          <img src="https://randomuser.me/api/portraits/med/men/99.jpg" alt="Dwight Stender" class="col-md-2" style="border-radius: 100%;">
-          <h1 class="col-md-7">Dwight Stender</h1>
+        <div class="col-md-12 profieltitel">
+          <img src="" alt="Dwight Stender" class="col-md-2" style="border-radius: 100%;">
+          <h1 class="col-md-10" id="result"></h1>
+        </div>
       </div>
       <div class="row">
 
@@ -77,13 +79,27 @@ title: Profile
 
 
 
-
-
-    <script src="../js/handlebars-v4.0.5.js"></script>
-    <script src="../js/people.js"></script>
-    <script src="../js/profile.js"></script>
-
 {% include footer.html %}
+
+<script src="../js/handlebars-v4.0.5.js"></script>
+<script src="../js/people.js"></script>
+<script src="../js/profile.js"></script>
+<script>
+var clickedId;
+clickedId = localStorage.getItem('clickId');
+
+if (persons.some(p => p.id == clickedId)) {
+  var first = persons[clickedId].firstName;
+  var last = persons[clickedId].surName;
+  document.getElementById("result").innerHTML = first + " " + last;
+  var image = persons[clickedId].picture;
+  document.getElementsByTagName("img")[0].setAttribute("src", image);
+} else {
+  document.getElementById("result").innerHTML = "Oops, something went wrong!";
+}
+
+
+</script>
 
 
 </body>
