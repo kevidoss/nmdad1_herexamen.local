@@ -40,7 +40,9 @@ $.getJSON('https://datatank.stad.gent/4/cultuursportvrijetijd/bibliotheekopenbes
 
     for (var i = 0; i < books.length; i++) {
       if (books[i].type == "Boek"){
-        $('#books').append($("<p>", {text: books[i].title},  "</p>"));
+        $contentToAppend = $('<p>', {text: books[i].title},  '</p>');
+        $('#books').append($contentToAppend);
+        $contentToAppend.addClass("boektitel");
 }
     }
 });

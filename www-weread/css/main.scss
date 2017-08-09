@@ -36,6 +36,11 @@ h1, h2, h3, h4, h5, h6 {color: $accentcolor;}
           margin-right: auto;
 }
 
+input {
+  border-radius: 5px;
+  border: 1px solid $accentcolor;
+}
+
 .middletext {
           text-align: center;
 }
@@ -71,6 +76,13 @@ tr:nth-child(even) {
 
 #signuplink {color: $accentcolor; font-weight: bold;}
 #mailglyph {background-color: $accentcolor;}
+
+#books>p:nth-child(odd){
+    background-color: $accentcolor;
+    padding: 3%;
+    border-radius: 5px;
+    color: $bgcolor;
+}​
 
 .g-signin2 {width: 90%; height: auto;}
 
